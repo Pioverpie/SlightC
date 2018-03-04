@@ -147,21 +147,22 @@ public class Main {
 					out = "printf(\"%s\", " + varLine + ");";
 				}
 				
-				else if(in.contains("0") || in.contains("1") || in.contains("2") ||
-						in.contains("3") || in.contains("4") || in.contains("5") ||
-						in.contains("6") || in.contains("7") || in.contains("8") ||
-						in.contains("9")
-						){//double var
-					double var = Double.parseDouble(varLine);
-					System.out.println("This is a Num Variable to be outprinted");
-					out = "printf(\"%d\", " + var + ");";
-				}
-				else {
-					
-				}
+//				else if(in.contains("0") || in.contains("1") || in.contains("2") ||
+//						in.contains("3") || in.contains("4") || in.contains("5") ||
+//						in.contains("6") || in.contains("7") || in.contains("8") ||
+//						in.contains("9")
+//						){//double var
+//					double var = Double.parseDouble(varLine);
+//					System.out.println("This is a Num Variable to be outprinted");
+//					out = "printf(\"%d\", " + var + ");";
+//				}
+//				else {
+//					
+//				}
 			}
 			
-			else 
+			//else 
+			else
 			{
 			System.out.println("This is a String LITERAL to be outprinted");
 			out = "printf(" + varLine + ");";
