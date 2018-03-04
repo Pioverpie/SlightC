@@ -1,0 +1,4 @@
+x is 12
+from 0 to x {
+output("Hi\n")
+}

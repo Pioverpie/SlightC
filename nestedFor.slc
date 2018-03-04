@@ -1,0 +1,8 @@
+x is 3
+y is 4
+
+from 0 to x {
+output("Outer")
+from 0 to y{
+output("Inner")}
+}
