@@ -1,0 +1,6 @@
+x is 0
+y is 5
+z is "Test\n"
+from x to y {
+output(z)
+}
