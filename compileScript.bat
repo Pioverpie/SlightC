@@ -4,6 +4,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary
 call "C:\Program Files\Microsoft Visual Studio 2008\VC\vcvarsall.bat" x86_amd64
 call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat
 cd "%home%"
+javac Main.java
 echo Starting Conversion
 set tbc=%~f1
 java Main "%~f1"
