@@ -11,6 +11,7 @@ echo "Conversion Complete"
 cl "%tbc:~0,-4%.c"
 rem del "%tbc:~0,-4%.c"
 del "%tbc:~0,-4%.obj"
+rem cls
 "%tbc:~0,-4%.exe"
 echo[
 echo[
