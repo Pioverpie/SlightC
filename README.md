@@ -65,7 +65,7 @@ For output the syntax in SlightC is:<br/>
 `output(x)`
 
 The equivalent in Python would be:<br/>
-`print(x)`
+`printf(x)` if x is a string and `printf("%d", x)` if x is an int.
 
 For input syntax is identical to the C equivalent. This includes cross compatibilty with C libraries such as `stdio.h`
 
