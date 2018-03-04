@@ -1,0 +1,6 @@
+x is 12
+from 0 to x {
+output(x)
+x is now 3
+}
+output(x)
