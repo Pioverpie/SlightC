@@ -133,17 +133,20 @@ public class Main {
 		}
 		else if(typeDetector(in) == 4) {//PRINT
 			String varLine = in.replace("output", "").replace(")", "").replace("(", "").replace(";", "");
-			System.out.println(varLine);
-			if (isInt(varLine))
+			//System.out.println(varLine);
+			if (GlobalVar.substringExists(varLine+" = "))
 			{
-				int var = Integer.parseInt(varLine);
-				out = "printf(\"%d\", " + var + ");";
+				
+				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" = ",GlobalVar.Record.length()-1)).contains("\"")) {//string var
+					
+					out = "printf(\"%s\", " + varLine + ");";
+				}
+				else{//int var
+					int var = Integer.parseInt(varLine);
+					out = "printf(\"%d\", " + var + ");";
+				}
 			}
-			else if (isFloat(varLine))
-			{
-				float var = Float.parseFloat(varLine);
-				out = "printf(\"%f\", " + var + ");";				
-			}
+			
 			else 
 			{
 			out = "printf(" + varLine + ");";
@@ -155,14 +158,14 @@ public class Main {
 		
 		
 		
-		
+		GlobalVar.addToString(out);
 		return out;
 	}//end of converter
 	
 	
 	static int typeDetector(String line) {
 		String[] myLine = line.split(" ");
-		if(line.contains(" is ")) {
+		if(line.contains(" is ") ) {
 			return 0;//VARIABLE
 		}
 		else if(myLine[0].equals("from")) {
@@ -193,5 +196,20 @@ public class Main {
 	
 	
 }//end of class
+
+
+class GlobalVar{
+	static String Record = "";
+	static public void addToString(String s) {
+		Record += s+"\n";
+	}
+	static public boolean substringExists(String ss) {
+		if(Record.contains(ss)) {
+			return true;
+		}
+		return false;
+	}
+	
+}
 
 
