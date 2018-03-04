@@ -138,7 +138,7 @@ public class Main {
 			{
 				
 				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" = ",GlobalVar.Record.length()-1)-1).contains("\"")) {//string var
-					
+					//outOf Range fix
 					out = "printf(\"%s\", " + varLine + ");";
 				}
 				else{//int var
