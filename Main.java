@@ -142,15 +142,16 @@ public class Main {
 					out = "printf(\"%s\", " + varLine + ");";
 				}
 				else if(varLine.contains(".")) {
-					double var = Double.parseDouble(varLine.trim());
+					double var = Double.parseDouble(varLine);
 					out = "printf(\"%d\", " + var + ");";
 				}
 				else if(varLine.contains("0") || varLine.contains("1") || varLine.contains("2") ||
 						varLine.contains("3") || varLine.contains("4") || varLine.contains("5") ||
 						varLine.contains("6") || varLine.contains("7") || varLine.contains("8") ||
 						varLine.contains("9")
-						){//int var
-					int var = Integer.parseInt(varLine.trim());
+						){//double var
+					//System.out.println("");
+					int var = Integer.parseInt(varLine);
 					out = "printf(\"%f\", " + var + ");";
 				}
 			}
