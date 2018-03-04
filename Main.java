@@ -211,5 +211,6 @@ class GlobalVar{
 	}
 	
 }
+//lolwut
 
 
