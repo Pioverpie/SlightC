@@ -136,8 +136,9 @@ public class Main {
 		}
 		else if(typeDetector(in) == 4) {//PRINT
 			String varLine = in.replace("output", "").replace(")", "").replace("(", "").replace(";", "").trim();
+			System.out.println("debugging varline: " + varLine);
 			//System.out.println(varLine);
-			if (GlobalVar.substringExists(varLine+" = "))
+			if (GlobalVar.Record.contains(varLine+" = "))
 			{
 				
 				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
