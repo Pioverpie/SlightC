@@ -138,31 +138,31 @@ public class Main {
 			String varLine = in.replace("output", "").replace(")", "").replace("(", "").replace(";", "").trim();
 			System.out.println("debugging varline: " + varLine);
 			//System.out.println(varLine);
-			if (GlobalVar.Record.contains(varLine+" ="))
-			{
-				System.out.println("Probably gonna be a var printing");
-				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
-					//plz w
-					System.out.println("This is a String Variable to be outprinted");
-					out = "printf(\"%s\", " + varLine + ");";
-				}
-				
-//				else if(in.contains("0") || in.contains("1") || in.contains("2") ||
-//						in.contains("3") || in.contains("4") || in.contains("5") ||
-//						in.contains("6") || in.contains("7") || in.contains("8") ||
-//						in.contains("9")
-//						){//double var
-//					double var = Double.parseDouble(varLine);
-//					System.out.println("This is a Num Variable to be outprinted");
-//					out = "printf(\"%d\", " + var + ");";
+//			if (GlobalVar.Record.contains(varLine+" ="))
+//			{
+//				System.out.println("Probably gonna be a var printing");
+//				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
+//					//plz w
+//					System.out.println("This is a String Variable to be outprinted");
+//					out = "printf(\"%s\", " + varLine + ");";
 //				}
-//				else {
-//					
-//				}
-			}
-			
-			//else 
-			else
+//				
+////				else if(in.contains("0") || in.contains("1") || in.contains("2") ||
+////						in.contains("3") || in.contains("4") || in.contains("5") ||
+////						in.contains("6") || in.contains("7") || in.contains("8") ||
+////						in.contains("9")
+////						){//double var
+////					double var = Double.parseDouble(varLine);
+////					System.out.println("This is a Num Variable to be outprinted");
+////					out = "printf(\"%d\", " + var + ");";
+////				}
+////				else {
+////					
+////				}
+//			}
+//			
+//			//else 
+			if(true)//else
 			{
 			System.out.println("This is a String LITERAL to be outprinted");
 			out = "printf(" + varLine + ");";
