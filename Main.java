@@ -141,8 +141,12 @@ public class Main {
 					//plz w
 					out = "printf(\"%s\", " + varLine + ");";
 				}
-				else{//int var
-					int var = Integer.parseInt(varLine);
+				else if(varLine.contains("0") || varLine.contains("1") || varLine.contains("2") ||
+						varLine.contains("3") || varLine.contains("4") || varLine.contains("5") ||
+						varLine.contains("6") || varLine.contains("7") || varLine.contains("8") ||
+						varLine.contains("9")
+						){//int var
+					int var = Integer.parseInt(varLine.trim());
 					out = "printf(\"%d\", " + var + ");";
 				}
 			}
@@ -193,7 +197,7 @@ public class Main {
 	
 	
 	
-	//nuther comment
+	
 	
 }//end of class
 
