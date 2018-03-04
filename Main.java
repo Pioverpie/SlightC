@@ -162,10 +162,19 @@ public class Main {
 //			}
 //			
 //			//else 
-			if(true)//else
+			if(!in.contains("="))//else
 			{
 			System.out.println("This is a String LITERAL to be outprinted");
 			out = "printf(" + varLine + ");";
+			}
+			/*
+			 * int a = 10;
+			char *intStr = itoa(a);
+			string str = string(intStr);
+			 */
+			else {
+				out = "int hooplass = "+varLine+"\n char *intStr = itoa(hooplass);\nstring str = string(intStr)\nprintf(str);\n";
+				
 			}
 			
 		}
