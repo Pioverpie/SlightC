@@ -135,7 +135,7 @@ public class Main {
 			out = "";
 		}
 		else if(typeDetector(in) == 4) {//PRINT
-			String varLine = in.replace("output", "").replace(")", "").replace("(", "").replace(";", "");
+			String varLine = in.replace("output", "").replace(")", "").replace("(", "").replace(";", "").trim();
 			//System.out.println(varLine);
 			if (GlobalVar.substringExists(varLine+" = "))
 			{
@@ -224,4 +224,3 @@ class GlobalVar{
 //lolwut
 
 
-//p
