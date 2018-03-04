@@ -138,11 +138,12 @@ public class Main {
 			String varLine = in.replace("output", "").replace(")", "").replace("(", "").replace(";", "").trim();
 			System.out.println("debugging varline: " + varLine);
 			//System.out.println(varLine);
-			if (GlobalVar.Record.contains(varLine+" = "))
+			if (GlobalVar.Record.contains(varLine+" ="))
 			{
 				
 				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
 					//plz w
+					System.out.println("This is a String Variable to be outprinted");
 					out = "printf(\"%s\", " + varLine + ");";
 				}
 				
@@ -152,12 +153,14 @@ public class Main {
 						varLine.contains("9")
 						){//double var
 					double var = Double.parseDouble(varLine);
+					System.out.println("This is a Num Variable to be outprinted");
 					out = "printf(\"%d\", " + var + ");";
 				}
 			}
 			
 			else 
 			{
+			System.out.println("This is a String LITERAL to be outprinted");
 			out = "printf(" + varLine + ");";
 			}
 			
@@ -225,4 +228,3 @@ class GlobalVar{
 //lolwut
 
 
-//56
