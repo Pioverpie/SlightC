@@ -140,21 +140,24 @@ public class Main {
 			//System.out.println(varLine);
 			if (GlobalVar.Record.contains(varLine+" ="))
 			{
-				System.out.println("Probably gonna be a var");
+				System.out.println("Probably gonna be a var printing");
 				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
 					//plz w
 					System.out.println("This is a String Variable to be outprinted");
 					out = "printf(\"%s\", " + varLine + ");";
 				}
 				
-				else if(varLine.contains("0") || varLine.contains("1") || varLine.contains("2") ||
-						varLine.contains("3") || varLine.contains("4") || varLine.contains("5") ||
-						varLine.contains("6") || varLine.contains("7") || varLine.contains("8") ||
-						varLine.contains("9")
+				else if(in.contains("0") || in.contains("1") || in.contains("2") ||
+						in.contains("3") || in.contains("4") || in.contains("5") ||
+						in.contains("6") || in.contains("7") || in.contains("8") ||
+						in.contains("9")
 						){//double var
 					double var = Double.parseDouble(varLine);
 					System.out.println("This is a Num Variable to be outprinted");
 					out = "printf(\"%d\", " + var + ");";
+				}
+				else {
+					
 				}
 			}
 			
