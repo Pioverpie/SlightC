@@ -140,7 +140,7 @@ public class Main {
 			//System.out.println(varLine);
 			if (GlobalVar.Record.contains(varLine+" ="))
 			{
-				
+				System.out.println("Probably gonna be a var");
 				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
 					//plz w
 					System.out.println("This is a String Variable to be outprinted");
