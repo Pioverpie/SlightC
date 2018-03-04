@@ -35,8 +35,11 @@ public class Main {
 	     int counter = 1;
 	     while(in.ready()) {
 	    	 currLine = in.readLine();
-	    	 out.println(converter(currLine));
+	    	 String ssss = converter(currLine);
+	    	 out.println(ssss);
 	    	 System.out.println("Line "+counter+" interpreted");
+	    	 System.out.println("Line "+counter+": "+ currLine);
+	    	 System.out.println("Line "+counter+": "+ ssss);
 	    	 counter++;
 	     }
 	     
