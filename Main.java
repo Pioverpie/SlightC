@@ -137,8 +137,8 @@ public class Main {
 			if (GlobalVar.substringExists(varLine+" = "))
 			{
 				
-				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =",GlobalVar.Record.length()-1)+1).contains("\"")) {//string var
-					
+				if(GlobalVar.Record.substring(GlobalVar.Record.indexOf(varLine+" =")-1,     GlobalVar.Record.indexOf(";", GlobalVar.Record.indexOf(varLine+" =")-1)      ).contains("\"")) {//string var
+					//plz w
 					out = "printf(\"%s\", " + varLine + ");";
 				}
 				else{//int var
