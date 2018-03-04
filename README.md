@@ -1,4 +1,4 @@
-#  ![SlightC](https://github.com/VerdantPanda/meet_greet/blob/master/images/Untitled3.png)
+#  ![SlightC](https://github.com/Pioverpie/SlightC/blob/master/images/Untitled3.png)
 A statically typed language project created for Hack FSU 5.
 
 ## Introduction
