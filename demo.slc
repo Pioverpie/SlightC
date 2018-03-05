@@ -1,6 +1,7 @@
 x is 0
-y is 5
-z is "Test\n"
+y is 6
+z is "SlightC! Is the best hack here"
 from x to y {
 output(z)
+output("\nHi\n")
 }
