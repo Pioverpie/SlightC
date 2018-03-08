@@ -98,25 +98,5 @@ from 0 to x {
     }
 }
 ```
-
-Euclids Greatest Common Devisor (GCD) algorithm:<br/>
-```
-function gcd(m, n) {
-    if (m == 0 && n == 0)
-        return -1;
-
-    if (m < 0) m is -m;
-    if (n < 0) n is -n;
-
-    while (n) {
-        r is m % n;
-        m is n;
-        n is r;
-    }
-    return m;
-}
-
-output(gcd(25, 10));
-```
 ## <a name="conclusion"></a>Conclusion
 SlightC is a language that combines the ease of Python with the speed C. It represents the best of both worlds, allowing users to develop programs with a simplified syntax reminiscent of interpreted languages, yet that runs with the speed of a compiled program.
